@@ -1,0 +1,249 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+@keyframes linkHover{
+	from { color: black; background-color: white;}
+	to { color: blue; background-color: gray;}
+}
+
+
+
+/*------------ CABEÇALHO ------------*/
+
+
+
+.cabecalho{
+	background-color: white;
+	border-bottom: 1px solid gray;
+}
+
+
+
+/*------------ NAVEGAÇÃO ------------*/
+
+
+
+.nav{
+
+}
+
+
+
+/*------- icone navbar -------*/
+
+
+
+.navBrand{
+	width: 85px;
+	padding-top: 15px;
+	padding-bottom: 10px;
+	margin-left: 50px;
+}
+
+
+
+/*------- menu navbar -------*/
+
+
+
+.menuNav{
+	padding-right: 80px;
+	padding-top: 30px;
+	font-size: 30px;
+	list-style: none;
+	display: flex;
+	float: right;
+}
+
+.menuNav a{
+	text-decoration: none;
+	margin-right: 110px;
+	padding: 10px;
+	color: black;
+	font-family: arial;
+}
+
+.menuNav a:hover{
+	animation-name: linkHover;
+	animation-duration: 0.6s;
+	border-radius: 10px;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+.pointer{
+	border-bottom: 5px solid black;
+}
+
+
+
+/*------------ ARTICLE ------------*/
+
+.conteudo{
+	
+}
+
+.solicitarServico{
+	background-image: url(imagens/fundoCards.jpg);
+	margin-top: 30px;
+	margin-left: 30px;
+	color: white;
+	width: 300px;
+	height: 230px;
+	border-radius: 15px;
+	float: left;
+}
+
+
+
+/*------- card 1 -------*/
+
+.imgCard{
+	background-color: rgba(255, 255, 255, 0.6); 
+	border-radius: 10px; 
+	padding: 10px;
+	margin-top: 20px;
+	margin-left: 115px;
+}
+
+.tituloCard1{
+	font-family: Andale Mono, monospace;
+	font-size: 1.2em;
+	font-weight: bold;
+	text-align: center;
+}
+
+.btnCard1{
+	font-family: Andale Mono, monospace;
+	font-size: 1.2em;
+	font-weight: bold;
+	border-radius: 10px;
+	padding: 5px;
+	padding-left: 10px;
+	margin-top: 40px;
+	margin-left: 35px;
+	display: flex;
+}
+
+.iconBtn{
+	width:15px; 
+	padding-right: 10px;
+}
+
+.btnCard1:hover{
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+/*------- card 2 -------*/
+
+.relatarProblema{
+	background-image: url(imagens/fundoCards.jpg);
+	margin-top: 30px;
+	margin-left: 30px;
+	color: white;
+	width: 300px;
+	height: 230px;
+	border-radius: 15px;
+	float: left;
+}
+
+.imgCard2{
+	background-color: rgba(255, 255, 255, 0.6); 
+	border-radius: 10px; 
+	padding: 10px;
+	margin-top: 20px;
+	margin-left: 110px;
+}
+
+.tituloCard2{
+	font-family: Andale Mono, monospace;
+	font-size: 1.2em;
+	font-weight: bold;
+	text-align: center;
+}
+
+.btnCard2{
+	font-family: Andale Mono, monospace;
+	font-size: 1.2em;
+	font-weight: bold;
+	border-radius: 10px;
+	padding: 5px;
+	padding-left: 10px;
+	margin-top: 40px;
+	margin-left: 43.5px;
+	display: flex;
+}
+
+.iconBtn2{
+	width:15px; 
+	padding-right: 10px;
+	padding-top: 5.5px;
+}
+
+.btnCard2:hover{
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+
+/*------- card 2 -------*/
+
+
+
+.sinistro{
+	background-image: url(imagens/fundoCards.jpg);
+	margin-top: 30px;
+	margin-left: 30px;
+	color: white;
+	width: 340px;
+	height: 320px;
+	border-radius: 15px;
+	float: left;
+}
+
+.imgCard3{
+	background-color: rgba(255, 255, 255, 0.6); 
+	border-radius: 10px; 
+	padding: 10px;
+	margin-top: 20px;
+	margin-left: 115px;
+}
+
+.tituloCard3{
+	font-family: Andale Mono, monospace;
+	font-size: 1.2em;
+	font-weight: bold;
+	text-align: center;
+}
+
+.subDesc{
+	font-family: Andale Mono, monospace;
+	font-size: 1em;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 20px;
+}
+
+.btnCard3{
+	font-family: Andale Mono, monospace;
+	font-size: 1.2em;
+	font-weight: bold;
+	border-radius: 10px;
+	padding: 5px;
+	padding-left: 10px;
+	margin-top: 40px;
+	margin-left: 43.5px;
+	display: flex;
+}
+
+.iconBtn3{
+	width:35px; 
+	padding-right: 10px;
+	padding-top: 1.5px;
+}
+
+.btnCard3:hover{
+	background-color: rgba(255, 255, 255, 0.5);
+}

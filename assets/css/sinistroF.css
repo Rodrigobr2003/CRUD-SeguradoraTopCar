@@ -1,0 +1,200 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+@keyframes linkHover{
+	from { color: black; background-color: white;}
+	to { color: blue; background-color: gray;}
+}
+
+@keyframes botaoRelato{
+	from {background-color: red;}
+	to { background-color: rgba(102, 0, 0, 1.0);}
+}
+
+a{
+	color: black;
+	text-decoration: none;
+}
+
+/*------------ CABEÇALHO ------------*/
+
+
+
+.cabecalho{
+	background-color: white;
+	border-bottom: 1px solid gray;
+}
+
+
+
+/*------------ NAVEGAÇÃO ------------*/
+
+
+
+.nav{
+
+}
+
+
+
+/*------- icone navbar -------*/
+
+
+
+.navBrand{
+	width: 85px;
+	padding-top: 15px;
+	padding-bottom: 10px;
+	margin-left: 50px;
+}
+
+
+
+/*------- menu navbar -------*/
+
+
+
+.menuNav{
+	padding-right: 80px;
+	padding-top: 30px;
+	font-size: 30px;
+	list-style: none;
+	display: flex;
+	float: right;
+}
+
+.menuNav a{
+	text-decoration: none;
+	margin-right: 110px;
+	padding: 10px;
+	color: black;
+	font-family: arial;
+}
+
+.menuNav a:hover{
+	animation-name: linkHover;
+	animation-duration: 0.6s;
+	border-radius: 10px;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+.pointer{
+	border-bottom: 5px solid black;
+}
+
+
+
+/*------------ BODY ------------*/
+
+.fundoImagem{
+	position: relative;
+	background-image: url(imagens/fundo.png);
+	background-size: cover;
+}
+
+
+
+article{
+	display: flex;
+}
+
+
+
+/*------------ CONTEUDO ------------*/
+
+.conteudo{
+	background-color: rgba(102, 102, 102, 0.5);
+	display: inline-block;
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 50px;
+	border-radius: 20px;
+	clear: both;
+}
+
+.titulo{
+	font-size: 3em;
+	font-family: arial;
+	margin-left: 20px;
+	float: left;
+}
+
+
+.conteudoImg{
+	float: left; 
+	margin-left: 20px; 
+	width: 80px;
+	margin-top: -20px;
+}
+
+.descricao{
+	margin-top: 70px;
+	width: 470px;
+	background-color: rgba(0, 0, 0, 0.6);
+	border-radius: 40px;
+	color: white;
+	padding: 15px;
+	font-size: 1.2em;
+	font-family: 'Roboto', sans-serif;
+}
+
+.documentos{
+	margin-top: 20px;
+	width: 470px;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 40px;
+	color: black;
+	padding: 15px;
+	font-size: 1.2em;
+	font-family: 'Roboto', sans-serif;
+}
+
+.documentosTit{
+	text-align: center;
+	font-weight: bold;
+}
+
+.subTit{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	font-size: 0.9em;
+	width: 290px;
+	text-align: center;
+}
+
+.lista li{
+	margin-left: 15px;
+	margin-top: 20px;
+	font-size: 0.85em;
+	width: 260px;
+}
+
+.botao{
+	display: flex;
+	clear: left;
+	margin-top: 20px;
+	margin-left: 41.5%;
+	background-color: red;
+	color: white;
+	padding: 10px;
+	border-radius: 15px;
+	float: left;
+	font-size: 1.5em;
+}
+
+.botao:hover{
+	animation-name: botaoRelato;
+	animation-duration: 0.6s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+.botao a{
+	text-decoration: none;
+	color: white;
+}

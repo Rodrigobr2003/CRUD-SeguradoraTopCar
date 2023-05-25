@@ -1,0 +1,191 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+@keyframes linkHover{
+	from { color: black; background-color: white;}
+	to { color: blue; background-color: gray;}
+}
+
+
+/*------------ CABEÇALHO ------------*/
+
+
+
+.cabecalho{
+	background-color: white;
+	border-bottom: 1px solid gray;
+}
+
+
+
+/*------------ NAVEGAÇÃO ------------*/
+
+
+
+.nav{
+
+}
+
+
+
+/*------- icone navbar -------*/
+
+
+
+.navBrand{
+	width: 85px;
+	padding-top: 15px;
+	padding-bottom: 10px;
+	margin-left: 50px;
+}
+
+
+
+/*------- menu navbar -------*/
+
+
+
+.menuNav{
+	padding-right: 80px;
+	padding-top: 30px;
+	font-size: 30px;
+	list-style: none;
+	display: flex;
+	float: right;
+}
+
+.menuNav a{
+	text-decoration: none;
+	margin-right: 110px;
+	padding: 10px;
+	color: black;
+	font-family: arial;
+}
+
+.menuNav a:hover{
+	animation-name: linkHover;
+	animation-duration: 0.6s;
+	border-radius: 10px;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+.pointer{
+	border-bottom: 5px solid black;
+}
+
+
+
+/*------------ BODY ------------*/
+
+.fundoImagem{
+	position: relative;
+	background-image: url(imagens/fundo.png);
+	background-size: cover;
+}
+
+
+.conteudo{
+	position: relative;
+	display: flex;
+}
+
+
+
+/*------------ SELETOR ------------*/
+
+.seletor{
+	background-color: rgba(102, 102, 102, 0.5);
+	display: inline-block;
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 40px;
+	border-radius: 15px;
+	padding: 50px;
+}
+
+
+
+/*------- H3 -------*/
+
+.titulo{
+	font-family: arial;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.6);
+	border-radius: 10px;
+	padding: 10px;
+	color: white;
+	font-size: 2em;
+}
+
+
+
+/*---- buttons ----*/
+
+.buttons{
+	margin-top: 50px;
+	display: flex;
+	display: grid;
+}
+
+button{
+	background-color: rgba(0, 0, 0, 0.6);
+	color: white;
+	padding: 10px;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 1.5em;
+	font-weight: bold;
+	margin-bottom: 100px;
+	margin-left: 10px;
+  	margin-right: 10px;
+}
+
+button:hover{
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;
+}
+
+.botaoET{
+	grid-column-start: 1;
+  	grid-column-end: 2;
+  	grid-row-start: 1;
+  	grid-row-end: 2;
+}
+
+.botaoEB{
+	grid-column-start: 1;
+  	grid-column-end: 2;
+  	grid-row-start: 2;
+  	grid-row-end: 3;
+}
+
+.botaoDT{
+	grid-column-start: 3;
+  	grid-column-end: 4;
+  	grid-row-start: 1;
+  	grid-row-end: 2;
+}
+
+.botaoDB{
+	grid-column-start: 3;
+  	grid-column-end: 4;
+  	grid-row-start: 2;
+  	grid-row-end: 3;
+}
+
+.botaoF{
+	grid-column-start: 1;
+  	grid-column-end: 4;
+  	grid-row-start: 3;
+  	grid-row-end: 4;
+ 	margin-bottom: -10px;
+}
+
+button a{
+	color: white;
+	text-decoration: none;
+}
