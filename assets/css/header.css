@@ -46,6 +46,7 @@ header{
     color: black;
     font-family: Arial;
     padding: 5px;
+    cursor: pointer;
 }
 
 .links li {

@@ -1,7 +1,11 @@
-window.onload = function(){
-    let xhr = new XMLHttpRequest()
+const section = document.querySelector('#section')
 
-    xhr.onreadystatechange = function(){
+//#region CRIA ARQUIVO CSS
+function criarCss(idPag) {
+    let xhr = new XMLHttpRequest()
+    let arquivo = idPag;
+
+    xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
             let css = document.createElement('link')
             css.rel = 'stylesheet'
@@ -10,7 +14,7 @@ window.onload = function(){
 
             let conteudoCss = document.createElement('link')
             conteudoCss.rel = 'stylesheet'
-            conteudoCss.href = 'assets/css/index.css'
+            conteudoCss.href = `assets/css/${arquivo}.css`
             document.head.appendChild(conteudoCss)
 
         }
@@ -18,9 +22,17 @@ window.onload = function(){
     xhr.open("GET", "assets/css/header.css")
     xhr.send()
 }
+//#endregion
 
+//#region WINDOW LOAD
+window.addEventListener('load', function (params) {
+    let id = 'conteudo'
+    criarCss(id)
+})
+//#endregion
+
+//#region CARREGA AUTOMATICAMENTE O CONTEUDO DE HOME
 document.addEventListener("DOMContentLoaded", function () {
-    const section = document.querySelector('#section')
     let url = 'conteudo.html'
     
     let xhr = new XMLHttpRequest()
@@ -33,3 +45,28 @@ document.addEventListener("DOMContentLoaded", function () {
     xhr.open("GET", url)
     xhr.send()
 });
+//#endregion
+
+//#region MUDANÇA DE PÁGINAS
+let botoes = document.querySelectorAll('.linkNav')
+
+botoes.forEach(botao => {
+
+    botao.addEventListener('click', function() {
+        let btnId = botao.id
+
+        let xhr = new XMLHttpRequest()
+
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                section.innerHTML = xhr.response
+            }
+        }
+        xhr.open('GET', `${btnId}.html`)
+        xhr.send()
+
+        criarCss(btnId)
+    })
+    
+});
+//#endregion
