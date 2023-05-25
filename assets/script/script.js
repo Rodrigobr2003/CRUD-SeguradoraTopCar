@@ -23,7 +23,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const section = document.querySelector('#section')
     let url = 'conteudo.html'
     
-    let teste = document.createElement('p')
-    teste.innerHTML = 'aaa'
-    section.appendChild(teste)
+    let xhr = new XMLHttpRequest()
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            section.innerHTML = xhr.response
+        }
+    }
+    xhr.open("GET", url)
+    xhr.send()
 });
