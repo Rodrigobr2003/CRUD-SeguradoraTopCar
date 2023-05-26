@@ -2,12 +2,12 @@
 
 .fundoImagem{
 	position: relative;
-	background-image: url('../images/bg.png');
-	background-size: cover;
 }
 
 
 .conteudo{
+	background-image: url('../images/bg.png');
+	background-size: cover;
 	position: relative;
 	display: flex;
 }
@@ -17,7 +17,7 @@
 /*------------ SELETOR ------------*/
 
 .seletor{
-	background-color: rgba(102, 102, 102, 0.5);
+	background-color: rgba(168, 168, 168, 0.7);
 	display: inline-block;
 	margin-top: 50px;
 	margin-left: auto;
@@ -34,7 +34,7 @@
 .tituloSim{
 	font-family: arial;
 	text-align: center;
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(0, 0, 0, 0.7);
 	border-radius: 10px;
 	padding: 10px;
 	color: white;
@@ -44,7 +44,7 @@
 .descricao{
 	font-family: arial;
 	text-align: center;
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(0, 0, 0, 0.7);
 	border-radius: 10px;
 	margin-top: 30px;
 	padding: 10px;
@@ -64,7 +64,7 @@
 }
 
 .tituloInput{
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(0, 0, 0, 0.7);
 	width: 170px;
 	clear: both;
 	color: white;
@@ -83,7 +83,7 @@
 }
 
 .tituloSelect{
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(0, 0, 0, 0.7);
 	width: 170px;
 	clear: both;
 	color: white;

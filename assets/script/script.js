@@ -1,4 +1,5 @@
 const section = document.querySelector('#section')
+let css = undefined
 
 //#region CRIA ARQUIVO CSS
 function criarCss(idPag) {
@@ -7,14 +8,24 @@ function criarCss(idPag) {
 
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
-            let css = document.createElement('link')
-            css.rel = 'stylesheet'
-            css.href = xhr.responseURL
-            document.head.appendChild(css)
+            
+            if (!css) {
+                css = document.createElement('link')
+                css.rel = 'stylesheet'
+                css.href = xhr.responseURL
+                document.head.appendChild(css)
+            }
+
+            let cssRemoval = document.querySelector('.apagarCss')
+
+            if (cssRemoval) {
+                cssRemoval.remove()
+            }
 
             let conteudoCss = document.createElement('link')
             conteudoCss.rel = 'stylesheet'
             conteudoCss.href = `assets/css/${arquivo}.css`
+            conteudoCss.classList.add('apagarCss')
             document.head.appendChild(conteudoCss)
 
         }

@@ -1,6 +1,17 @@
-/*------------ ARTICLE ------------*/
+.servicos{
+	width: 100%;
+}
 
-.solicitarServico{
+.flex{
+	float: left;
+	display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+}
+
+.card{
 	background-image: url('../images/fundoCards.jpg');
 	margin-top: 30px;
 	margin-left: 30px;
@@ -8,29 +19,24 @@
 	width: 300px;
 	height: 230px;
 	border-radius: 15px;
-	float: left;
 }
-
-
-
-/*------- card 1 -------*/
 
 .imgCard{
 	background-color: rgba(255, 255, 255, 0.6); 
 	border-radius: 10px; 
+	height: 60px;
 	padding: 10px;
 	margin-top: 20px;
-	margin-left: 115px;
+	margin-bottom: 10px;
 }
 
-.tituloCard1{
+.tituloCard{
 	font-family: Andale Mono, monospace;
 	font-size: 1.2em;
 	font-weight: bold;
-	text-align: center;
 }
 
-.btnCard1{
+.btnCard{
 	font-family: Andale Mono, monospace;
 	font-size: 1.2em;
 	font-weight: bold;
@@ -38,127 +44,9 @@
 	padding: 5px;
 	padding-left: 10px;
 	margin-top: 40px;
-	margin-left: 35px;
 	display: flex;
 }
 
-.iconBtn{
-	width:15px; 
-	padding-right: 10px;
-}
-
-.btnCard1:hover{
-	background-color: rgba(255, 255, 255, 0.5);
-}
-
-/*------- card 2 -------*/
-
-.relatarProblema{
-	background-image: url('../images/fundoCards.jpg');
-	margin-top: 30px;
-	margin-left: 30px;
-	color: white;
-	width: 300px;
-	height: 230px;
-	border-radius: 15px;
-	float: left;
-}
-
-.imgCard2{
-	background-color: rgba(255, 255, 255, 0.6); 
-	border-radius: 10px; 
-	padding: 10px;
-	margin-top: 20px;
-	margin-left: 110px;
-}
-
-.tituloCard2{
-	font-family: Andale Mono, monospace;
-	font-size: 1.2em;
-	font-weight: bold;
-	text-align: center;
-}
-
-.btnCard2{
-	font-family: Andale Mono, monospace;
-	font-size: 1.2em;
-	font-weight: bold;
-	border-radius: 10px;
-	padding: 5px;
-	padding-left: 10px;
-	margin-top: 40px;
-	margin-left: 43.5px;
-	display: flex;
-}
-
-.iconBtn2{
-	width:15px; 
-	padding-right: 10px;
-	padding-top: 5.5px;
-}
-
-.btnCard2:hover{
-	background-color: rgba(255, 255, 255, 0.5);
-}
-
-
-
-/*------- card 2 -------*/
-
-
-
-.sinistro{
-	background-image: url('../images/fundoCards.jpg');
-	margin-top: 30px;
-	margin-left: 30px;
-	color: white;
-	width: 340px;
-	height: 320px;
-	border-radius: 15px;
-	float: left;
-}
-
-.imgCard3{
-	background-color: rgba(255, 255, 255, 0.6); 
-	border-radius: 10px; 
-	padding: 10px;
-	margin-top: 20px;
-	margin-left: 115px;
-}
-
-.tituloCard3{
-	font-family: Andale Mono, monospace;
-	font-size: 1.2em;
-	font-weight: bold;
-	text-align: center;
-}
-
-.subDesc{
-	font-family: Andale Mono, monospace;
-	font-size: 1em;
-	padding-left: 30px;
-	padding-right: 30px;
-	padding-top: 20px;
-}
-
-.btnCard3{
-	font-family: Andale Mono, monospace;
-	font-size: 1.2em;
-	font-weight: bold;
-	border-radius: 10px;
-	padding: 5px;
-	padding-left: 10px;
-	margin-top: 40px;
-	margin-left: 43.5px;
-	display: flex;
-}
-
-.iconBtn3{
-	width:35px; 
-	padding-right: 10px;
-	padding-top: 1.5px;
-}
-
-.btnCard3:hover{
+.btnCard:hover{
 	background-color: rgba(255, 255, 255, 0.5);
 }
