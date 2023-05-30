@@ -62,15 +62,20 @@ document.addEventListener("DOMContentLoaded", function () {
 let botoes = document.querySelectorAll('.linkNav')
 
 botoes.forEach(botao => {
+    trocaTela(botao)
+});
 
-    botao.addEventListener('click', function() {
+export function trocaTela(botao) {
+    botao.addEventListener('click', function () {
         let btnId = botao.id
-
+        console.log(btnId);
         let xhr = new XMLHttpRequest()
 
-        xhr.onreadystatechange = function() {
+        xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 section.innerHTML = xhr.response
+
+                adicionaScript()
             }
         }
         xhr.open('GET', `${btnId}.html`)
@@ -78,6 +83,18 @@ botoes.forEach(botao => {
 
         criarCss(btnId)
     })
+}
+
+//#endregion
+
+//#region Cria innerScript
+function adicionaScript() {
+    let tagBody = document.querySelector('.body')
     
-});
+    let newScript = document.createElement('script')
+    newScript.src = './assets/script/innerScript.js'
+    newScript.type = "module"
+
+    tagBody.appendChild(newScript)
+}
 //#endregion
