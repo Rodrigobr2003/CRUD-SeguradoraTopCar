@@ -60,22 +60,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //#region MUDANÇA DE PÁGINAS
 let botoes = document.querySelectorAll('.linkNav')
+let btnId = undefined
 
-botoes.forEach(botao => {
+botoes.forEach((botao) => {
     trocaTela(botao)
 });
 
 export function trocaTela(botao) {
     botao.addEventListener('click', function () {
-        let btnId = botao.id
-        console.log(btnId);
+        btnId = botao.id
+        
         let xhr = new XMLHttpRequest()
 
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 section.innerHTML = xhr.response
-
-                adicionaScript()
+                
+                let botoes = document.querySelectorAll('.botao')
+                botoes.forEach(function (innerBtn) {
+                    innerBtn.addEventListener('click', function () {
+                        btnId = innerBtn.id
+                        xhr.open('GET', `${btnId}.html`)
+                        xhr.send()
+                        
+                    })
+                })
             }
         }
         xhr.open('GET', `${btnId}.html`)
@@ -83,18 +92,7 @@ export function trocaTela(botao) {
 
         criarCss(btnId)
     })
-}
 
-//#endregion
-
-//#region Cria innerScript
-function adicionaScript() {
-    let tagBody = document.querySelector('.body')
     
-    let newScript = document.createElement('script')
-    newScript.src = './assets/script/innerScript.js'
-    newScript.type = "module"
-
-    tagBody.appendChild(newScript)
 }
 //#endregion
