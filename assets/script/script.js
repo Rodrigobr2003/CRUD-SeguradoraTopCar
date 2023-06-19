@@ -72,35 +72,28 @@ botoes.forEach((botao) => {
 function trocaTela(botao) {
     botao.addEventListener('click', function () {
         btnId = botao.id
-        let xhr = new XMLHttpRequest()
-
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                section.innerHTML = xhr.response
-                
-                let botoes = document.querySelectorAll('.botao')
-                botoes.forEach(function (innerBtn) {
-                    innerBtn.addEventListener('click', function () {
-                        btnId = innerBtn.id
-                        xhr.open('GET', `${btnId}.html`)
-                        xhr.send()
-                    })
-                })
-            }
-        }
-        xhr.open('GET', `${btnId}.html`)
-        xhr.send()
-
-        criarCss(btnId)
-        criarJs(btnId)
+        carregaArquivo(btnId)
     })
+}
 
-    
+export function carregaArquivo(btnId) {
+    let xhr = new XMLHttpRequest()
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            section.innerHTML = xhr.response
+        }
+    }
+    xhr.open('GET', `${btnId}.html`)
+    xhr.send()
+
+    criarCss(btnId)
+    criarJs(btnId)
 }
 //#endregion
 
 //#region CRIA ARQUIVO JS PARA PAGINA
-function criarJs(idPag) {
+export function criarJs(idPag) {
     let xhr = new XMLHttpRequest();
     let arquivo = idPag;
 
