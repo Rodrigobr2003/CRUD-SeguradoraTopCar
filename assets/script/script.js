@@ -1,5 +1,7 @@
 const section = document.querySelector('#section')
 let css = undefined
+let javaScriptDocument = undefined
+let body = document.querySelector(".body")
 
 //#region CRIA ARQUIVO CSS
 function criarCss(idPag) {
@@ -8,7 +10,7 @@ function criarCss(idPag) {
 
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
-            
+
             if (!css) {
                 css = document.createElement('link')
                 css.rel = 'stylesheet'
@@ -21,7 +23,7 @@ function criarCss(idPag) {
             if (cssRemoval) {
                 cssRemoval.remove()
             }
-
+            
             let conteudoCss = document.createElement('link')
             conteudoCss.rel = 'stylesheet'
             conteudoCss.href = `assets/css/${arquivo}.css`
@@ -39,6 +41,7 @@ function criarCss(idPag) {
 window.addEventListener('load', function (params) {
     let id = 'conteudo'
     criarCss(id)
+    criarJs(id)
 })
 //#endregion
 
@@ -66,10 +69,9 @@ botoes.forEach((botao) => {
     trocaTela(botao)
 });
 
-export function trocaTela(botao) {
+function trocaTela(botao) {
     botao.addEventListener('click', function () {
         btnId = botao.id
-        
         let xhr = new XMLHttpRequest()
 
         xhr.onreadystatechange = function () {
@@ -82,7 +84,6 @@ export function trocaTela(botao) {
                         btnId = innerBtn.id
                         xhr.open('GET', `${btnId}.html`)
                         xhr.send()
-                        
                     })
                 })
             }
@@ -91,8 +92,43 @@ export function trocaTela(botao) {
         xhr.send()
 
         criarCss(btnId)
+        criarJs(btnId)
     })
 
     
+}
+//#endregion
+
+//#region CRIA ARQUIVO JS PARA PAGINA
+function criarJs(idPag) {
+    let xhr = new XMLHttpRequest();
+    let arquivo = idPag;
+
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            
+            if (!javaScriptDocument) {
+                javaScriptDocument = document.createElement('script')
+                javaScriptDocument.type = 'module'
+                javaScriptDocument.id = "apagarJs"
+                javaScriptDocument.src = xhr.responseURL
+                body.appendChild(javaScriptDocument)
+            }
+
+            let jsRemoval = document.querySelector('#apagarJs')
+
+            if (jsRemoval) {
+                jsRemoval.remove()
+            }
+
+            let conteudoJs = document.createElement('script')
+            conteudoJs.type = 'module'
+            conteudoJs.src = `assets/script/${arquivo}.js`
+            conteudoJs.id = "apagarJs"
+            body.appendChild(conteudoJs)
+        }
+    }
+    xhr.open("GET", 'assets/script/conteudo.js')
+    xhr.send()
 }
 //#endregion
