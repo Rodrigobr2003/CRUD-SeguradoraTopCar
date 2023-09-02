@@ -1,0 +1,72 @@
+<%- include('includes/head') %> <%- include('includes/nav') %>
+
+<div class="fundoImagem">
+  <article>
+    <div class="conteudo">
+      <img src="/sinistro.png" style="float: left" />
+      <h1 class="titulo">Sinistro</h1>
+
+      <p class="descricao">
+        Escolha o tipo de ocorrência e saiba quais documentos serão necessários.
+      </p>
+
+      <button class="opcao" style="float: left">
+        <a href="/sinistro/colisao">
+          <img src="/batida.png" style="width: 80px; float: left" />
+          <h1 class="tituloOpc">Colisão</h1>
+          <p class="descricaoOpc">
+            Popularmente conhecida como "batida", é o choque entre um veículo e
+            outro.
+          </p>
+        </a>
+      </button>
+
+      <button class="opcao" style="float: left; margin-left: 20px">
+        <a href="/sinistro/furto">
+          <img src="/roubo.png" style="width: 63px; float: left" />
+          <h1 class="tituloOpc">Roubo</h1>
+          <p class="descricaoOpc">
+            Roubo é caracterisado quando o condutor sofre violência. Já o furto
+            é quando o carro é levado sem que o dono veja.
+          </p>
+        </a>
+      </button>
+
+      <button class="opcao" style="float: left; clear: left">
+        <a href="/sinistro/chuva">
+          <img src="/chuva.png" style="width: 63px; float: left" />
+          <h1 class="tituloOpc">Chuva</h1>
+          <p class="descricaoOpc">
+            Chuva em excesso ou enchentes são situações em que podem provocar
+            danos no veículo.
+          </p>
+        </a>
+      </button>
+
+      <button class="opcao" style="float: left; margin-left: 20px">
+        <a href="/sinistro/fogo">
+          <img src="/fogo.png" style="width: 80px; float: left" />
+          <h1 class="tituloOpc">Incêndio</h1>
+          <p class="descricaoOpc">
+            Fogo em qualquer parte do veículo, tanto interna quanto externa.
+          </p>
+        </a>
+      </button>
+
+      <button
+        class="opcao"
+        style="float: left; clear: left; margin-left: 12%; width: 370px"
+      >
+        <a href="/sinistro/vidro">
+          <img src="/vidro.png" style="width: 80px; float: left" />
+          <h1 class="tituloOpc">Vidro/Farol/Retrovisor</h1>
+          <p class="descricaoOpc">
+            Troca ou reparo em caso de vidos trincados ou quebrados.
+          </p>
+        </a>
+      </button>
+      <button class="botao"><a href="/servicos">Voltar</a></button>
+    </div>
+  </article>
+  <script type="module" src="assets/script/servico.js"></script>
+</div>

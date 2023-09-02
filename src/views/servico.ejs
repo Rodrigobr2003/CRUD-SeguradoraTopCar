@@ -1,18 +1,24 @@
 <%- include('includes/head') %> <%- include('includes/nav') %>
 <div class="fundoImagem">
+  <article class="conteudo">
+    <div class="seletor">
+      <h3 class="titulo">Solicite o tipo de Serviço:</h3>
 
-	<article class="conteudo">
-		<div class="seletor">
-			<h3 class="titulo">Solicite o tipo de Serviço:</h3>
+      <div class="buttons">
+        <button id="servico" class="botao botaoET">Serviço Online</button>
 
-			<div class="buttons">
-				<button id="servico" class="botao botaoET">Serviço Online</a></button>
-				<button id="chatOnline" class="botao botaoEB">Chat On-Line</a></button>
-				<button id="sinistro" class="botao botaoDT">Sinistro</button>
-				<button id="relatarProblema" class="botao botaoDB">Relatar Problema</button>
-				<button id="simularSeguro" class="botao botaoF">Simular Seguro</button>
-			</div>
+        <button id="chatOnline" class="botao botaoEB">Chat On-Line</button>
 
-		</div>
-	</article>
+        <button id="sinistro" class="botao botaoDT">
+          <a href="/sinistro">Sinistro</a>
+        </button>
+
+        <button id="relatarProblema" class="botao botaoDB">
+          Relatar Problema
+        </button>
+
+        <button id="simularSeguro" class="botao botaoF">Simular Seguro</button>
+      </div>
+    </div>
+  </article>
 </div>
