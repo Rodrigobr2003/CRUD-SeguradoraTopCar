@@ -1,10 +1,10 @@
 <%- include('includes/head') %> <%- include('includes/nav') %>
 
-<div class="fundoImagem">
+<!--<div class="fundoImagem">
   <article>
     <div class="conteudo">
       <img src="/sinistro.png" style="float: left" />
-      <h1 class="titulo">Sinistro</h1>
+      <h1 class="mainTitulo">Sinistro</h1>
 
       <p class="descricao">
         Escolha o tipo de ocorrência e saiba quais documentos serão necessários.
@@ -13,54 +13,55 @@
       <button class="opcao" style="float: left">
         <a href="/sinistro/colisao">
           <img src="/batida.png" style="width: 80px; float: left" />
-          <h1 class="tituloOpc">Colisão</h1>
-          <p class="descricaoOpc">
+          <h1 class="titulo">Colisão</h1>
+          <p class="descricao">
             Popularmente conhecida como "batida", é o choque entre um veículo e
             outro.
           </p>
         </a>
-      </button>
+      </button>JA
 
       <button class="opcao" style="float: left; margin-left: 20px">
         <a href="/sinistro/furto">
           <img src="/roubo.png" style="width: 63px; float: left" />
-          <h1 class="tituloOpc">Roubo</h1>
-          <p class="descricaoOpc">
+          <h1 class="titulo">Roubo</h1>
+          <p class="descricao">
             Roubo é caracterisado quando o condutor sofre violência. Já o furto
             é quando o carro é levado sem que o dono veja.
           </p>
         </a>
-      </button>
+      </button>JA
 
       <button class="opcao" style="float: left; clear: left">
         <a href="/sinistro/chuva">
           <img src="/chuva.png" style="width: 63px; float: left" />
-          <h1 class="tituloOpc">Chuva</h1>
-          <p class="descricaoOpc">
+          <h1 class="titulo">Chuva</h1>
+          <p class="descricao">
             Chuva em excesso ou enchentes são situações em que podem provocar
             danos no veículo.
           </p>
         </a>
-      </button>
+      </button>JA
 
       <button class="opcao" style="float: left; margin-left: 20px">
         <a href="/sinistro/fogo">
           <img src="/fogo.png" style="width: 80px; float: left" />
-          <h1 class="tituloOpc">Incêndio</h1>
-          <p class="descricaoOpc">
+          <h1 class="titulo">Incêndio</h1>
+          <p class="descricao">
             Fogo em qualquer parte do veículo, tanto interna quanto externa.
           </p>
         </a>
-      </button>
+      </button>JA
 
       <button
         class="opcao"
-        style="float: left; clear: left; margin-left: 12%; width: 370px"
+        style="float: left; clear: left; margin-left: 12%; width: 500px"
+        ;
       >
         <a href="/sinistro/vidro">
           <img src="/vidro.png" style="width: 80px; float: left" />
-          <h1 class="tituloOpc">Vidro/Farol/Retrovisor</h1>
-          <p class="descricaoOpc">
+          <h1 class="titulo">Vidro/Farol/Retrovisor</h1>
+          <p class="descricao">
             Troca ou reparo em caso de vidos trincados ou quebrados.
           </p>
         </a>
@@ -69,4 +70,64 @@
     </div>
   </article>
   <script type="module" src="assets/script/servico.js"></script>
+</div> -->
+<div class="fundoImagem">
+  <article class="conteudo">
+    <div class="seletor">
+      <h3 class="titulo">Sinistro</h3>
+
+      <div class="buttons">
+        <button class="button botaoColisao">
+          <a href="/sinistro/colisao">
+            <img src="/batida.png" style="width: 80px; float: left" />
+            <h1 class="titulo">Colisão</h1>
+            <p class="descricao">
+              Popularmente conhecida como "batida", é o choque entre um veículo
+              e outro.
+            </p>
+          </a>
+        </button>
+
+        <button class="button botaoFurto">
+          <a href="/sinistro/furto">
+            <img src="/roubo.png" style="width: 63px; float: left" />
+            <h1 class="titulo">Roubo</h1>
+            <p class="descricao">
+              Roubo/Furto é quando o carro é levado sem que o dono veja.
+            </p>
+          </a>
+        </button>
+
+        <button class="button botaoChuva">
+          <a href="/sinistro/chuva">
+            <img src="/chuva.png" style="width: 63px; float: left" />
+            <h1 class="titulo">Chuva</h1>
+            <p class="descricao">
+              Chuva em excesso ou enchentes podem causar danos no veículo.
+            </p>
+          </a>
+        </button>
+
+        <button class="button botaoFogo">
+          <a href="/sinistro/fogo">
+            <img src="/fogo.png" style="width: 80px; float: left" />
+            <h1 class="titulo">Incêndio</h1>
+            <p class="descricao">
+              Fogo em qualquer parte do veículo, tanto interna quanto externa.
+            </p>
+          </a>
+        </button>
+
+        <button class="button botaoVidro">
+          <a href="/sinistro/vidro">
+            <img src="/vidro.png" style="width: 80px; float: left" />
+            <h1 class="titulo">Vidro/Farol/Retrovisor</h1>
+            <p class="descricao">
+              Troca ou reparo em caso de vidos trincados ou quebrados.
+            </p>
+          </a>
+        </button>
+      </div>
+    </div>
+  </article>
 </div>
