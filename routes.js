@@ -5,6 +5,7 @@ const seguroController = require("./src/controllers/controllerSeguro");
 const servicoController = require("./src/controllers/controllerServico");
 const simularSeguroController = require("./src/controllers/controllerSimularSeguro");
 const sinistroController = require("./src/controllers/controllerSinistro");
+const relatarProblemaController = require("./src/controllers/controllerRelatarProblema");
 
 //Rotas Index
 routes.get("/", indexController.paginaIndex);
@@ -25,10 +26,16 @@ routes.get(
 
 //Rotas Sinistro
 routes.get("/sinistro", sinistroController.paginaSinistro);
-routes.get("/sinistro/chuva", sinistroController.paginaChuva); // ejs & css
-routes.get("/sinistro/colisao", sinistroController.paginaColisao); // ejs & css
-routes.get("/sinistro/fogo", sinistroController.paginaFogo); // ejs & css
-routes.get("/sinistro/furto", sinistroController.paginaFurto); // ejs & css
-routes.get("/sinistro/vidro", sinistroController.paginaVidro); // css
+routes.get("/sinistro/chuva", sinistroController.paginaChuva);
+routes.get("/sinistro/colisao", sinistroController.paginaColisao);
+routes.get("/sinistro/fogo", sinistroController.paginaFogo);
+routes.get("/sinistro/furto", sinistroController.paginaFurto);
+routes.get("/sinistro/vidro", sinistroController.paginaVidro);
+
+//Rotas Relatar Problema
+routes.get(
+  "/relatar-problema",
+  relatarProblemaController.paginaRelatarProblema
+);
 
 module.exports = routes;
