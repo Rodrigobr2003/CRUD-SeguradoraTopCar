@@ -1,11 +1,14 @@
 const express = require("express");
 const routes = express.Router();
+
 const indexController = require("./src/controllers/indexController");
 const seguroController = require("./src/controllers/controllerSeguro");
 const servicoController = require("./src/controllers/controllerServico");
 const simularSeguroController = require("./src/controllers/controllerSimularSeguro");
 const sinistroController = require("./src/controllers/controllerSinistro");
 const relatarProblemaController = require("./src/controllers/controllerRelatarProblema");
+const solicitarServicoController = require("./src/controllers/controllerSolicitarServico");
+const chatController = require("./src/controllers/controllerChat");
 
 //Rotas Index
 routes.get("/", indexController.paginaIndex);
@@ -37,5 +40,11 @@ routes.get(
   "/relatar-problema",
   relatarProblemaController.paginaRelatarProblema
 );
+
+//Rotas Solicitar Serviço
+routes.get("/solicitar-servico", solicitarServicoController.paginaSolicitar);
+
+//Rotas Chat Online
+routes.get("/chat-online", chatController.paginaChat);
 
 module.exports = routes;
