@@ -1,7 +1,8 @@
 const express = require("express");
 const routes = express.Router();
 
-const indexController = require("./src/controllers/indexController");
+const indexController = require("./src/controllers/controllerIndex");
+const homeController = require("./src/controllers/homeController");
 const seguroController = require("./src/controllers/controllerSeguro");
 const servicoController = require("./src/controllers/controllerServico");
 const simularSeguroController = require("./src/controllers/controllerSimularSeguro");
@@ -12,6 +13,9 @@ const chatController = require("./src/controllers/controllerChat");
 
 //Rotas Index
 routes.get("/", indexController.paginaIndex);
+
+//Rotas Home
+routes.get("/home", homeController.paginaHome);
 
 //Rotas Seguro
 routes.get("/seguro", seguroController.paginaSeguro);
