@@ -10,6 +10,7 @@ const sinistroController = require("./src/controllers/controllerSinistro");
 const relatarProblemaController = require("./src/controllers/controllerRelatarProblema");
 const solicitarServicoController = require("./src/controllers/controllerSolicitarServico");
 const chatController = require("./src/controllers/controllerChat");
+const controllerCadastro = require("./src/controllers/controllerCadastro");
 
 //Rotas Index
 routes.get("/", indexController.paginaIndex);
@@ -50,5 +51,8 @@ routes.get("/solicitar-servico", solicitarServicoController.paginaSolicitar);
 
 //Rotas Chat Online
 routes.get("/chat-online", chatController.paginaChat);
+
+//Rotas Cadastro
+routes.post("/login", controllerCadastro);
 
 module.exports = routes;
