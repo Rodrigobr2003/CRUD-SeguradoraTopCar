@@ -1,0 +1,82 @@
+body {
+  background-image: url("/backgroundImage.jpg");
+  position: relative;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.actions {
+  margin-top: 4%;
+  display: flex;
+}
+
+.conteudo {
+  margin: 20px;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 400px;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.login {
+  margin: 20px;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 400px;
+  height: 250px;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.input {
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 3.5em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+label {
+  font-size: 1.5em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.input-text {
+  font-size: 1.5em;
+  background: none;
+  width: 230px;
+  border: none;
+  border-bottom: 3px solid rgba(75, 75, 75, 0.8);
+  margin-left: 5px;
+  padding-left: 10px;
+}
+
+.input-text:focus {
+  outline: none;
+}
+
+.button {
+  background-color: rgba(226, 226, 226);
+  padding: 10px;
+  border: none;
+  width: 150px;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid rgb(133, 133, 133, 0);
+  transition: background-color 0.3s ease;
+  transition: color 0.3s ease-in-out;
+  transition: border 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: rgb(133, 133, 133);
+  color: aliceblue;
+  border: 2px solid black;
+}
