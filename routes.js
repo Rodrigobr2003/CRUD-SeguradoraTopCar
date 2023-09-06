@@ -53,6 +53,6 @@ routes.get("/solicitar-servico", solicitarServicoController.paginaSolicitar);
 routes.get("/chat-online", chatController.paginaChat);
 
 //Rotas Cadastro
-routes.post("/login", controllerCadastro);
+routes.post("/login", homeController.paginaHome);
 
 module.exports = routes;
