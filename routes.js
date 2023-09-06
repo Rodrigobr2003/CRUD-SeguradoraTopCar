@@ -10,7 +10,6 @@ const sinistroController = require("./src/controllers/controllerSinistro");
 const relatarProblemaController = require("./src/controllers/controllerRelatarProblema");
 const solicitarServicoController = require("./src/controllers/controllerSolicitarServico");
 const chatController = require("./src/controllers/controllerChat");
-const controllerCadastro = require("./src/controllers/controllerCadastro");
 
 //Rotas Index
 routes.get("/", indexController.paginaIndex);
