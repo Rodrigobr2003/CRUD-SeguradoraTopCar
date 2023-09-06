@@ -4,7 +4,7 @@ const validator = require("validator"); //
 const CadastroSchema = new mongoose.Schema({
   nome: { type: String, required: true },
   sobrenome: { type: String, required: true },
-  idade: { type: String, required: true },
+  idade: { type: Date, required: true },
   email: { type: String, required: true },
   telefone: { type: String, required: true },
   senha: { type: String, required: true },
@@ -24,7 +24,19 @@ class Cadastro {
 
     if (this.errors.length > 0) return;
 
+    await this.userExists();
+
+    if (this.errors.length > 0) return;
+
+    //testar o bcrypjs
+
     this.cadastro = await CadastroModel.create(this.body);
+  }
+
+  async userExists() {
+    this.cadastro = await CadastroModel.findOne({ email: this.body.email });
+
+    if (this.cadastro) this.errors.push("O usuário já foi cadastrado");
   }
 
   validacao() {
@@ -45,12 +57,14 @@ class Cadastro {
       this.errors.push("Telefone é um campo obrigatório");
 
     if (!this.body.senha) this.errors.push("Senha é um campo obrigatório");
+    if (this.body.senha.length < 3 || this.body.senha.length > 50)
+      this.errors.push("Senha deve ter entre 3 e 50 caracteres");
   }
 
   cleanUp() {
     for (let dado in this.body) {
-      if (typeof dado !== "string") {
-        this.body = "";
+      if (typeof this.body[dado] !== "string") {
+        this.body[dado] = "";
       }
     }
 
