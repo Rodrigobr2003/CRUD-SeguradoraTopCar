@@ -10,7 +10,7 @@ const CadastroSchema = new mongoose.Schema({
   senha: { type: String, required: true },
 });
 
-const CadastroModel = new mongoose.model("Home", CadastroSchema);
+const CadastroModel = mongoose.model("Cadastro", CadastroSchema);
 
 class Cadastro {
   constructor(body) {
@@ -20,6 +20,8 @@ class Cadastro {
   }
 
   async register() {
+    console.log("req.body:", this.body); // Adicione esta linha
+
     this.validacao();
 
     if (this.errors.length > 0) return;
