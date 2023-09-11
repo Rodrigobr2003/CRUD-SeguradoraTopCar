@@ -41,6 +41,7 @@ const sessionOptions = session({
   },
 });
 
+//JSON -> submit method POST
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -55,12 +56,12 @@ app.use(express.static(path.resolve(__dirname, "public", "assets", "images")));
 //Utilitários do server
 app.use(flash());
 app.use(sessionOptions);
+app.use(middlewareGlobal);
 app.use(routes);
 
 // app.use(csrf()); //usa o csrf
 // app.use(checkCsrfError); //middleware para checar
 // app.use(csrfMiddleware); //middleware para checar
-app.use(middlewareGlobal);
 
 app.on("DB conectado", () => {
   app.listen(3000, () => {

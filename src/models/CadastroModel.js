@@ -20,8 +20,6 @@ class Cadastro {
   }
 
   async register() {
-    console.log("req.body:", this.body); // Adicione esta linha
-
     this.validacao();
 
     if (this.errors.length > 0) return;

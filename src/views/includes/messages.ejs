@@ -1,0 +1,5 @@
+<% if(errors.length > 0) {%> <% errors.forEach(erro => { %>
+<div class="erro"><%= erro %> <br /></div>
+<% })%> <% } %> <% if(success.length > 0) {%>
+<div class="success"><%= success %></div>
+<% } %>

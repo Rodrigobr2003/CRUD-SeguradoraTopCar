@@ -8,7 +8,7 @@ exports.cadastro = async function (req, res) {
     if (cadastro.errors.length > 0) {
       req.flash("errors", cadastro.errors);
       req.session.save(() => {
-        return res.redirect("/index");
+        res.redirect("/");
       });
       return;
     }
