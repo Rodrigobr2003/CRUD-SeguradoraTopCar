@@ -4,6 +4,9 @@ const express = require("express");
 const path = require("path");
 const routes = require("./routes");
 const mongoose = require("mongoose");
+const flash = require("connect-flash");
+const session = require("express-session");
+const MongoStore = require("connect-mongo");
 // const csrf = require("csurf");
 const {
   checkCsrfError,
@@ -27,6 +30,17 @@ mongoose
     console.log(err);
   });
 
+const sessionOptions = session({
+  secret: "akasdfj0út23453456+54qt23qv  qwf qwer qwer qewr asdasdasda a6()",
+  store: MongoStore.create({ mongoUrl: process.env.CONNECTIONSTRING }),
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    maxAge: 1000 * 60 * 60 * 24 * 7,
+    httpOnly: true,
+  },
+});
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -39,6 +53,8 @@ app.use(express.static(path.resolve(__dirname, "public", "assets", "css")));
 app.use(express.static(path.resolve(__dirname, "public", "assets", "images")));
 
 //Utilitários do server
+app.use(flash());
+app.use(sessionOptions);
 app.use(routes);
 
 // app.use(csrf()); //usa o csrf
