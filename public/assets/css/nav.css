@@ -41,7 +41,7 @@ header {
   padding-bottom: 30px;
 }
 
-.links a {
+.links .link {
   text-decoration: none;
   color: black;
   font-family: Arial;
@@ -53,10 +53,14 @@ header {
   margin-right: 40px;
 }
 
-.links a:hover {
+.links .link:hover {
   animation-name: linkHover;
   animation-duration: 0.6s;
   border-radius: 10px;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+}
+
+.profile {
+  width: 40px;
 }
