@@ -4,4 +4,3 @@ exports.paginaPerfil = (req, res) => {
     css: "profile",
   });
 };
-a;

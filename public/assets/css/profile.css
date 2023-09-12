@@ -1,0 +1,128 @@
+body {
+  background-image: url("/backgroundImage.jpg");
+  background-size: cover;
+  z-index: 0;
+  overflow-y: hidden;
+}
+
+article {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.conteudo {
+  margin: 20px;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 400px;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+}
+
+.intro input {
+  font-size: 2em;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 20px;
+  width: 300px;
+  padding-left: 5px;
+  border: none;
+  border-bottom: 3px solid rgba(75, 75, 75, 0.8);
+  background: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+.fotoPerfil {
+  width: 80px;
+}
+
+.infos {
+  margin-top: 20px;
+}
+
+.infos label {
+  font-size: 1.5em;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgba(75, 75, 75, 0.6);
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.infos input {
+  font-size: 1.5em;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 20px;
+  width: 230px;
+  margin-bottom: 20px;
+  padding-left: 5px;
+  border: none;
+  border-bottom: 3px solid rgba(75, 75, 75, 0.8);
+  background: none;
+}
+
+.botoes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  margin: 5px;
+  font-size: 1.25em;
+  font-weight: 600;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.apagar {
+  background-color: crimson;
+  color: rgb(0, 0, 0);
+  transition: background-color 0.4s ease, padding 0.4s ease, color 0.3s ease;
+}
+
+.apagar:hover {
+  background-color: rgb(248, 48, 88);
+  color: whitesmoke;
+  padding: 15px;
+}
+
+.editar {
+  background-color: darkgreen;
+  color: rgb(0, 0, 0);
+  transition: background-color 0.4s ease, padding 0.4s ease, color 0.3s ease;
+}
+
+.editar:hover {
+  background-color: rgb(7, 131, 7);
+  color: whitesmoke;
+  padding: 15px;
+}
+
+.seguro {
+  background-color: rgba(75, 75, 75, 0.8);
+  border-radius: 30px;
+  padding: 15px;
+  margin-top: 20px;
+  font-size: 1.5em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.seguro span {
+  color: white;
+  font-size: 0.9em;
+}
+
+.seguro p {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
