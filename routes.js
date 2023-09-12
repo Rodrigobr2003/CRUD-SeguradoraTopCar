@@ -11,6 +11,7 @@ const relatarProblemaController = require("./src/controllers/controllerRelatarPr
 const solicitarServicoController = require("./src/controllers/controllerSolicitarServico");
 const chatController = require("./src/controllers/controllerChat");
 const cadastroController = require("./src/controllers/controllerCadastro");
+const profileController = require("./src/controllers/controllerPerfil");
 
 //Rotas Index
 routes.get("/", indexController.paginaIndex);
@@ -54,5 +55,8 @@ routes.get("/chat-online", chatController.paginaChat);
 
 //Rotas Cadastro
 routes.post("/cadastro", cadastroController.cadastro);
+
+//Rotas Profile
+routes.get("/profile", profileController.paginaPerfil);
 
 module.exports = routes;
