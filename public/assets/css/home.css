@@ -10,17 +10,13 @@
     rgba(179, 179, 179, 1),
     rgba(255, 255, 255, 1)
   );
-  position: fixed;
-  width: 1343px;
-  display: flex;
-  position: relative;
-  z-index: 0;
+  float: inline-end;
 }
 
 /*------- apresentacao -------*/
 
 .apresentacao {
-  margin-top: 70px;
+  margin-top: 10px;
   margin-left: 50px;
   font-family: Andale Mono, monospace;
 }
@@ -85,5 +81,6 @@
   border-radius: 5px;
   border-left: 4px solid #198344;
   background-color: #a8f1c6;
-  z-index: 1;
+  display: flex;
+  float: inline-start;
 }
