@@ -40,7 +40,10 @@ exports.login = async function (req, res) {
     req.flash("success", "Logado com sucesso!");
     req.session.cadastro = login.cadastro;
     req.session.save(() => {
-      return res.render("/home");
+      return res.render("home", {
+        pagina: "Home",
+        css: "home",
+      });
     });
   } catch (err) {
     console.log(err);
