@@ -4,15 +4,19 @@
     <form>
       <div class="intro">
         <img class="fotoPerfil" src="/profile.png" />
-        <input type="text" name="nome" />
+        <input
+          value="<%= cadastro.nome %> <%= cadastro.sobrenome %>"
+          type="text"
+          name="nome"
+        />
       </div>
 
       <div class="infos">
         <label>Email:</label>
-        <input type="text" name="email" />
+        <input value="<%= cadastro.email %>" type="text" name="email" />
 
         <label>Telefone:</label>
-        <input type="text" name="telefone" />
+        <input value="<%= cadastro.telefone %>" type="text" name="telefone" />
       </div>
 
       <div class="botoes">
