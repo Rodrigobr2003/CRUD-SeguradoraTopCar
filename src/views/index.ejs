@@ -43,19 +43,19 @@
     <div class="conteudo login">
       <h2>Login:</h2>
 
-      <form action="/login" method="post">
+      <form action="/cadastro/login" method="POST">
         <div class="input">
           <label>Email:</label>
-          <input class="input-text" type="email" />
+          <input class="input-text" type="email" name="email" />
         </div>
 
         <div class="input">
           <label>Senha:</label>
-          <input class="input-text" type="password" />
+          <input class="input-text" type="password" name="senha" />
         </div>
 
         <div class="input">
-          <input class="button" type="button" value="Enviar" />
+          <button type="submit" class="button">Login</button>
         </div>
       </form>
     </div>

@@ -10,8 +10,9 @@ const sinistroController = require("./src/controllers/controllerSinistro");
 const relatarProblemaController = require("./src/controllers/controllerRelatarProblema");
 const solicitarServicoController = require("./src/controllers/controllerSolicitarServico");
 const chatController = require("./src/controllers/controllerChat");
-const cadastroController = require("./src/controllers/controllerCadastro");
 const profileController = require("./src/controllers/controllerPerfil");
+
+const cadastroController = require("./src/controllers/controllerCadastro");
 
 const { loginRequired } = require("./src/middlewares/middlewaresGlobais");
 
@@ -73,10 +74,11 @@ routes.get(
 //Rotas Chat Online
 routes.get("/chat-online", loginRequired, chatController.paginaChat);
 
-//Rotas Cadastro
-routes.post("/cadastro", cadastroController.cadastro);
-
 //Rotas Profile
 routes.get("/profile", loginRequired, profileController.paginaPerfil);
+
+//Rotas Cadastro
+routes.post("/cadastro", cadastroController.cadastro);
+routes.post("/cadastro/login", cadastroController.login);
 
 module.exports = routes;

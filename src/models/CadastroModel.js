@@ -79,6 +79,27 @@ class Cadastro {
       senha: this.body.senha,
     };
   }
+
+  async login() {
+    this.validacao();
+
+    //verifica erros
+    if (this.errors.length > 0) return;
+
+    //procurar email no BD
+    this.cadastro = await CadastroModel.findOne({ email: this.body.email });
+
+    if (!this.cadastro) {
+      this.errors.push("Usuário não existe");
+      return;
+    }
+
+    //compara a senha do input com a do usuario
+    if (!bcrypjs.compareSync(this.body.senha, this.cadastro.senha)) {
+      this.errors.push("Senha inválida");
+      return;
+    }
+  }
 }
 
 module.exports = Cadastro;
