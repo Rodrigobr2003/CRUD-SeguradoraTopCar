@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
-const validator = require("validator"); //
+const validator = require("validator");
+const bcrypjs = require("bcryptjs");
 
 const CadastroSchema = new mongoose.Schema({
   nome: { type: String, required: true },
@@ -28,7 +29,8 @@ class Cadastro {
 
     if (this.errors.length > 0) return;
 
-    //testar o bcrypjs
+    const salt = bcrypjs.genSaltSync();
+    this.body.senha = bcrypjs.hashSync(this.body.senha, salt);
 
     this.cadastro = await CadastroModel.create(this.body);
   }
