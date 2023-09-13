@@ -75,7 +75,7 @@ routes.get(
 routes.get("/chat-online", loginRequired, chatController.paginaChat);
 
 //Rotas Profile
-routes.get("/profile", loginRequired, profileController.paginaPerfil);
+routes.get("/profile/:id", loginRequired, profileController.paginaPerfil);
 
 //Rotas Cadastro
 routes.post("/cadastro", cadastroController.cadastro);

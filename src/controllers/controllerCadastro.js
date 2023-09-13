@@ -15,6 +15,7 @@ exports.cadastro = async function (req, res) {
 
     req.flash("success", "Cadastro realizado com sucesso!");
     req.session.save(() => {
+      req.session.id = cadastro._id;
       return res.redirect("/");
     });
     return;
