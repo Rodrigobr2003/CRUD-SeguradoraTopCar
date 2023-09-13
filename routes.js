@@ -13,50 +13,70 @@ const chatController = require("./src/controllers/controllerChat");
 const cadastroController = require("./src/controllers/controllerCadastro");
 const profileController = require("./src/controllers/controllerPerfil");
 
+const { loginRequired } = require("./src/middlewares/middlewaresGlobais");
+
 //Rotas Index
 routes.get("/", indexController.paginaIndex);
 
 //Rotas Home
-routes.get("/home", homeController.paginaHome);
+routes.get("/home", loginRequired, homeController.paginaHome);
 
 //Rotas Seguro
-routes.get("/seguro", seguroController.paginaSeguro);
+routes.get("/seguro", loginRequired, seguroController.paginaSeguro);
 
 //Rotas Serviços
-routes.get("/servicos", servicoController.paginaServico);
+routes.get("/servicos", loginRequired, servicoController.paginaServico);
 
 //Rotas Simular Seguro
-routes.get("/simular-seguro/carro", simularSeguroController.paginaCarro);
-routes.get("/simular-seguro/segurado", simularSeguroController.paginaSegurado);
+routes.get(
+  "/simular-seguro/carro",
+  loginRequired,
+  simularSeguroController.paginaCarro
+);
+routes.get(
+  "/simular-seguro/segurado",
+  loginRequired,
+  simularSeguroController.paginaSegurado
+);
 routes.get(
   "/simular-seguro/utilizacao",
+  loginRequired,
   simularSeguroController.paginaUtilizacao
 );
 
 //Rotas Sinistro
-routes.get("/sinistro", sinistroController.paginaSinistro);
-routes.get("/sinistro/chuva", sinistroController.paginaChuva);
-routes.get("/sinistro/colisao", sinistroController.paginaColisao);
-routes.get("/sinistro/fogo", sinistroController.paginaFogo);
-routes.get("/sinistro/furto", sinistroController.paginaFurto);
-routes.get("/sinistro/vidro", sinistroController.paginaVidro);
+routes.get("/sinistro", loginRequired, sinistroController.paginaSinistro);
+routes.get("/sinistro/chuva", loginRequired, sinistroController.paginaChuva);
+routes.get(
+  "/sinistro/colisao",
+  loginRequired,
+  sinistroController.paginaColisao
+);
+routes.get("/sinistro/fogo", loginRequired, sinistroController.paginaFogo);
+routes.get("/sinistro/furto", loginRequired, sinistroController.paginaFurto);
+routes.get("/sinistro/vidro", loginRequired, sinistroController.paginaVidro);
 
 //Rotas Relatar Problema
 routes.get(
   "/relatar-problema",
+  loginRequired,
   relatarProblemaController.paginaRelatarProblema
 );
 
 //Rotas Solicitar Serviço
-routes.get("/solicitar-servico", solicitarServicoController.paginaSolicitar);
+routes.get(
+  "/solicitar-servico",
+  loginRequired,
+  solicitarServicoController.paginaSolicitar
+);
 
 //Rotas Chat Online
-routes.get("/chat-online", chatController.paginaChat);
+routes.get("/chat-online", loginRequired, chatController.paginaChat);
 
 //Rotas Cadastro
 routes.post("/cadastro", cadastroController.cadastro);
 
 //Rotas Profile
-routes.get("/profile", profileController.paginaPerfil);
+routes.get("/profile", loginRequired, profileController.paginaPerfil);
 
 module.exports = routes;

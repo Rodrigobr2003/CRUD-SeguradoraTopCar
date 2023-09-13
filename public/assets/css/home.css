@@ -72,18 +72,3 @@
   letter-spacing: 2px;
   word-spacing: 2px;
 }
-
-.success {
-  color: black;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.25em;
-  padding: 5px;
-  padding-left: 15px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  border-left: 4px solid #198344;
-  background-color: #a8f1c6;
-  display: flex;
-  float: inline-start;
-}
