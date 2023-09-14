@@ -100,6 +100,16 @@ class Cadastro {
       return;
     }
   }
+
+  async editar(id) {
+    if (typeof id !== "string") return;
+
+    if (this.errors.length > 0) return;
+
+    this.cadastro = await CadastroModel.findByIdAndUpdate(id, this.body, {
+      new: true,
+    });
+  }
 }
 
 module.exports = Cadastro;

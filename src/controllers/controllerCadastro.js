@@ -51,3 +51,25 @@ exports.login = async function (req, res) {
     return res.render("error");
   }
 };
+
+exports.edit = async (req, res) => {
+  try {
+    if (!req.session.cadastro._id) return res.render("error");
+
+    const novoProfile = new CadastroModel(req.body);
+    await novoProfile.editar(req.session.cadastro._id);
+
+    if (novoProfile.errors.length > 0) {
+      req.flash("errors", novoProfile.errors);
+      req.session.save(() => res.redirect("/profile/:id"));
+      return;
+    }
+
+    req.flash("success", "Perifl editado com sucesso");
+    req.session.save(() => res.redirect(`/profile/${novoProfile._id}`));
+    return;
+  } catch (err) {
+    console.log(err);
+    res.render("error");
+  }
+};
