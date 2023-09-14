@@ -110,6 +110,14 @@ class Cadastro {
       new: true,
     });
   }
+
+  async delet(id) {
+    if (typeof id !== "string") return;
+
+    const cadastro = await CadastroModel.findOneAndRemove({ _id: id });
+
+    return cadastro;
+  }
 }
 
 module.exports = Cadastro;

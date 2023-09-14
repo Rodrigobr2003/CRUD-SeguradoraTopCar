@@ -81,5 +81,6 @@ routes.get("/profile/:id", loginRequired, profileController.paginaPerfil);
 routes.post("/cadastro", cadastroController.cadastro);
 routes.post("/cadastro/login", cadastroController.login);
 routes.post("/profile/edit/:id", loginRequired, cadastroController.edit);
+routes.post("/profile/delet", loginRequired, cadastroController.delet);
 
 module.exports = routes;

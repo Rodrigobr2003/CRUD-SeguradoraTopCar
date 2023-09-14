@@ -2,19 +2,17 @@
 <article>
   <div class="conteudo">
     <form action="/profile/edit/:<%= cadastro._id %>" method="post">
-
       <div class="intro">
         <img class="fotoPerfil" src="/profile.png" />
         <div class="nome">
-          <input
-          value="<%= cadastro.nome %>"
-          type="text"
-          name="nome"
-        />
+          <input value="<%= cadastro.nome %>" type="text" name="nome" />
 
-        <input type="text" name="sobrenome" value="<%= cadastro.sobrenome %>">
+          <input
+            type="text"
+            name="sobrenome"
+            value="<%= cadastro.sobrenome %>"
+          />
         </div>
-        
       </div>
 
       <div class="infos">
@@ -26,16 +24,19 @@
       </div>
 
       <div class="botoes">
-        <!-- <button class="btn apagar" type="submit">Apagar conta</button> -->
+        <button class="btn editar" type="submit">Editar usuário</button>
+      </div>
+    </form>
 
-          <button class="btn editar" type="submit">Editar usuário</button>
-        
-      </div>
-    </form>
-      <div class="seguro">
-        <p>Seguro: <span>TESTE</span></p>
-        <p>Valor do seguro: <span>TESTE</span></p>
-      </div>
-    </form>
+    <div class="seguro">
+      <p>Seguro: <span>TESTE</span></p>
+      <p>Valor do seguro: <span>TESTE</span></p>
+    </div>
+
+    <div class="botoes">
+      <form action="/profile/delet" method="POST">
+        <button class="btn apagar" type="submit">Apagar conta</button>
+      </form>
+    </div>
   </div>
 </article>

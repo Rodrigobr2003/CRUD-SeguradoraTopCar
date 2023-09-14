@@ -2,7 +2,6 @@ body {
   background-image: url("/backgroundImage.jpg");
   background-size: cover;
   z-index: 0;
-  overflow-y: hidden;
 }
 
 article {

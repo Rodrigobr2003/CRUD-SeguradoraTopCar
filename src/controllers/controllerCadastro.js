@@ -61,12 +61,35 @@ exports.edit = async (req, res) => {
 
     if (novoProfile.errors.length > 0) {
       req.flash("errors", novoProfile.errors);
-      req.session.save(() => res.redirect("/profile/:id"));
+      req.session.save(() =>
+        res.redirect(`/profile/${novoProfile.cadastro._id}`)
+      );
       return;
     }
 
     req.flash("success", "Perifl editado com sucesso");
-    req.session.save(() => res.redirect(`/profile/${novoProfile._id}`));
+    req.session.save(() =>
+      res.redirect(`/profile/${req.session.cadastro._id}`)
+    );
+    return;
+  } catch (err) {
+    console.log(err);
+    res.render("error");
+  }
+};
+
+exports.delet = async (req, res) => {
+  try {
+    if (!req.session.cadastro._id) return res.render("error");
+
+    const cadastro = new CadastroModel(req.session.cadastro._id);
+
+    if (!cadastro) return res.render("error");
+
+    req.flash("success", "Contato apagado com sucesso!");
+    req.session.save(() => {
+      res.redirect("/");
+    });
     return;
   } catch (err) {
     console.log(err);
