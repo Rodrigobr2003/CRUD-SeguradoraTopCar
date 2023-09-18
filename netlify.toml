@@ -1,0 +1,10 @@
+# netlify.toml
+
+[build]
+  base = "public"
+  command = "node server.js"
+
+[[redirects]]
+  from = "/old-url"
+  to = "/new-url"
+  status = 301
