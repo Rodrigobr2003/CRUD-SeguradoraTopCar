@@ -44,19 +44,9 @@ class Cadastro {
   validacao() {
     this.cleanUp();
 
-    // if (!this.body.nome) this.errors.push("Nome é um campo obrigatório");
-
-    // if (!this.body.sobrenome)
-    //   this.errors.push("Sobrenome é um campo obrigatório");
-
-    // if (!this.body.idade) this.errors.push("Idade é um campo obrigatório");
-
     if (!this.body.email) this.errors.push("Email é um campo obrigatório");
     if (this.body.email && !validator.isEmail(this.body.email))
       this.errors.push("Email inválido");
-
-    // if (!this.body.telefone)
-    //   this.errors.push("Telefone é um campo obrigatório");
 
     if (!this.body.senha) this.errors.push("Senha é um campo obrigatório");
     if (this.body.senha.length < 3 || this.body.senha.length > 50)
@@ -99,6 +89,14 @@ class Cadastro {
       this.errors.push("Senha inválida");
       return;
     }
+  }
+
+  static async buscarPorId(id) {
+    if (typeof id !== "string") return;
+
+    const cadastro = await CadastroModel.findById(id);
+
+    return cadastro;
   }
 
   async editar(id) {

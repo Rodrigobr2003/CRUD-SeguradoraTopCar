@@ -52,6 +52,25 @@ exports.login = async function (req, res) {
   }
 };
 
+exports.editIndex = async (req, res) => {
+  try {
+    if (!req.session.cadastro._id) return res.render("error");
+
+    const cadastro = await CadastroModel.buscarPorId(req.session.cadastro._id);
+
+    if (!cadastro) return res.render("error");
+
+    res.render("profile", {
+      pagina: "profile",
+      css: "profile",
+      cadastro,
+    });
+  } catch (err) {
+    console.log(err);
+    res.render("error");
+  }
+};
+
 exports.edit = async (req, res) => {
   try {
     if (!req.session.cadastro._id) return res.render("error");
@@ -67,9 +86,9 @@ exports.edit = async (req, res) => {
       return;
     }
 
-    req.flash("success", "Perifl editado com sucesso");
-    req.session.save(() =>
-      res.redirect(`/profile/${req.session.cadastro._id}`)
+    req.flash("success", "Perfil editado com sucesso");
+    await req.session.save(() =>
+      res.redirect(`/profile/${novoProfile.cadastro._id}`)
     );
     return;
   } catch (err) {

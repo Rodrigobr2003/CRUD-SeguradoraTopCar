@@ -74,12 +74,10 @@ routes.get(
 //Rotas Chat Online
 routes.get("/chat-online", loginRequired, chatController.paginaChat);
 
-//Rotas Profile
-routes.get("/profile/:id", loginRequired, profileController.paginaPerfil);
-
 //Rotas Cadastro
 routes.post("/cadastro", cadastroController.cadastro);
 routes.post("/cadastro/login", cadastroController.login);
+routes.get("/profile/:id", loginRequired, cadastroController.editIndex);
 routes.post("/profile/edit/:id", loginRequired, cadastroController.edit);
 routes.post("/profile/delet", loginRequired, cadastroController.delet);
 
