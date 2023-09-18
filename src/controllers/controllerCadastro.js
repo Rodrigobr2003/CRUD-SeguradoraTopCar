@@ -101,7 +101,8 @@ exports.delet = async (req, res) => {
   try {
     if (!req.session.cadastro._id) return res.render("error");
 
-    const cadastro = new CadastroModel(req.session.cadastro._id);
+    const cadastroInstance = new CadastroModel(req.body); // Crie uma instância de Cadastro
+    const cadastro = await cadastroInstance.delet(req.session.cadastro._id); // Chame o método delet na instância
 
     if (!cadastro) return res.render("error");
 

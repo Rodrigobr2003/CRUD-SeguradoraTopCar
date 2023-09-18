@@ -112,7 +112,7 @@ class Cadastro {
   async delet(id) {
     if (typeof id !== "string") return;
 
-    const cadastro = await CadastroModel.findOneAndRemove({ _id: id });
+    const cadastro = await CadastroModel.findByIdAndDelete({ _id: id });
 
     return cadastro;
   }
