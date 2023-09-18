@@ -8,6 +8,9 @@ A Seguradora TopCar é uma empresa fictícia que oferece serviços de seguro par
 ### O projeto inclui as seguintes funcionalidades principais:
 
 Cadastro de segurados.
+Leitura de informações do perfil.
+Edição de dados do perfil.
+Deletar a conta.
 Solicitar serviços.
 Simulação de seguro.
 Processamento de reclamações.
