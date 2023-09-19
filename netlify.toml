@@ -2,7 +2,7 @@
 
 [build]
   base = "public"
-  command = "node server.js"
+  command = "npm run start"
 
 [[redirects]]
   from = "/old-url"
