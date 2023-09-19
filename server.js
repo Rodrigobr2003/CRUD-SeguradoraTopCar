@@ -64,8 +64,8 @@ app.use(routes);
 // app.use(csrfMiddleware); //middleware para checar
 
 app.on("DB conectado", () => {
-  app.listen(3000, () => {
+  const PORT = process.env.PORT || 3000;
+  app.listen(PORT, () => {
     console.log("Servidor está funcionando!");
-    console.log("Acessar em: http://localhost:3000");
   });
 });
