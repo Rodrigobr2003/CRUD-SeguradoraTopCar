@@ -2,7 +2,7 @@
 
 [build]
   base = "public"
-  command = "nodemon server.js"
+  command = "node server.js"
 
 [[redirects]]
   from = "/old-url"
