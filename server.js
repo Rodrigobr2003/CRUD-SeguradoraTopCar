@@ -65,7 +65,9 @@ app.use(routes);
 
 app.on("DB conectado", () => {
   const PORT = process.env.PORT || 3000;
+
   app.listen(PORT, () => {
     console.log("Servidor está funcionando!");
+    console.log(`Server esta operando: http://localhost:${PORT}`);
   });
 });
