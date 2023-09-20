@@ -6,6 +6,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .actions {
@@ -70,12 +71,7 @@ label {
 
 @media (max-width: 1000px) {
   .conteudo {
-    margin: 20px;
-    text-align: left;
-    background-color: rgba(255, 255, 255, 0.5);
     width: 350px;
-    padding: 30px;
-    border-radius: 20px;
   }
 }
 
@@ -104,9 +100,12 @@ label {
 }
 
 @media (max-width: 700px) {
-  .login {
+  .conteudo {
     width: 200px;
-    height: 180px;
+  }
+
+  .login {
+    height: 210px;
   }
 
   h2 {
@@ -119,7 +118,7 @@ label {
 
   .input-text {
     font-size: 1em;
-    width: 130px;
+    width: 160px;
   }
 
   .button {
@@ -128,24 +127,30 @@ label {
   }
 }
 
-@media (max-width: 300px) {
-  .actions {
-    margin-top: 4%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
+@media (max-width: 600px) {
   .conteudo {
-    width: 220px;
+    width: 180px;
   }
 
   .login {
-    width: 200px;
     height: 210px;
   }
 }
 
+@media (max-width: 550px) {
+  .actions {
+    flex-direction: column;
+  }
+
+  .conteudo {
+    width: 240px;
+  }
+
+  .input-text {
+    font-size: 1em;
+    width: 130px;
+  }
+}
 .input {
   margin-top: 20px;
 }
