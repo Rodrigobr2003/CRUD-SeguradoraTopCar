@@ -39,8 +39,12 @@ header {
   list-style: none;
   margin-right: 200px;
   display: flex;
-  float: left;
+  align-items: center;
   padding-bottom: 30px;
+}
+
+.profile {
+  width: 40px;
 }
 
 .links .link {
@@ -55,14 +59,159 @@ header {
   margin-right: 40px;
 }
 
+.burger-checkbox {
+  display: none;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-right: 10px; /* Ajuste a margem conforme necessário */
+}
+
+.line {
+  height: 3px;
+  width: 25px;
+  background-color: black;
+  margin: 3px 0;
+}
+
+@media (max-width: 1000px) {
+  .cabecalho {
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo {
+    width: 80px;
+    margin-left: 200px;
+  }
+
+  .links {
+    padding-top: 30px;
+    font-size: 30px;
+    margin-left: 80px;
+  }
+}
+
+@media (max-width: 850px) {
+  .cabecalho {
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo {
+    width: 70px;
+    margin-left: 220px;
+  }
+
+  .links {
+    padding-top: 10px;
+    font-size: 20px;
+    margin-left: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width: 650px) {
+  .cabecalho {
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo {
+    width: 60px;
+    margin-left: 200px;
+  }
+
+  .links {
+    padding-top: 10px;
+    font-size: 20px;
+    margin-left: 10px;
+  }
+
+  .links li {
+    margin-right: 20px;
+  }
+
+  .profile {
+    width: 20px;
+  }
+}
+
+@media (max-width: 520px) {
+  .cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    float: left;
+    margin-left: 0px;
+  }
+
+  .burger {
+    display: flex;
+    float: right;
+  }
+
+  .links {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 10px;
+  }
+
+  .profile {
+    width: 40px;
+  }
+
+  .burger-checkbox:checked + .burger + .links {
+    background-color: rgba(87, 87, 87, 0.95);
+    border-radius: 10px;
+    display: flex;
+    width: 400px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+  }
+
+  .links li {
+    margin-bottom: 10px;
+    width: 50%;
+    padding: 10px;
+    font-size: 20px;
+    border-bottom: 2px solid aliceblue;
+  }
+}
+
+@media (max-width: 300px) {
+  .logo {
+    float: left;
+    margin-left: 0px;
+  }
+
+  .burger {
+    display: flex;
+    float: right;
+  }
+
+  .burger-checkbox:checked + .burger + .links {
+    width: 200px;
+  }
+}
+
 .links .link:hover {
   animation-name: linkHover;
   animation-duration: 0.6s;
   border-radius: 10px;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-}
-
-.profile {
-  width: 40px;
 }

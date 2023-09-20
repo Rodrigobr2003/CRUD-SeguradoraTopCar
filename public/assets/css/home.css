@@ -3,8 +3,6 @@
   margin: 0px;
 }
 
-/*------------ ARTICLE ------------*/
-
 .conteudo {
   background-image: linear-gradient(
     rgba(179, 179, 179, 1),
@@ -15,13 +13,23 @@
   position: relative;
 }
 
-/*------- apresentacao -------*/
-
 .apresentacao {
   margin-top: 10px;
   margin-left: 50px;
   font-family: Andale Mono, monospace;
 }
+
+/* @media (max-width: 1000px) {
+}
+
+@media (max-width: 900px) {
+}
+
+@media (max-width: 700px) {
+}
+
+@media (max-width: 300px) {
+} */
 
 .titulo {
   font-size: 3.5em;
