@@ -69,13 +69,13 @@ label {
   transition: border 0.3s ease-in-out;
 }
 
-@media only screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
   .conteudo {
     width: 350px;
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media screen and (max-width: 900px) {
   .conteudo {
     width: 250px;
   }
@@ -99,7 +99,7 @@ label {
   }
 }
 
-@media only screen and (max-width: 700px) {
+@media screen and (max-width: 700px) {
   .conteudo {
     width: 200px;
   }
@@ -127,7 +127,7 @@ label {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .conteudo {
     width: 180px;
   }
