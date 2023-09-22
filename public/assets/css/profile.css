@@ -1,7 +1,6 @@
 body {
   background-image: url("/backgroundImage.jpg");
   background-size: cover;
-  z-index: 0;
 }
 
 article {
@@ -25,7 +24,7 @@ article {
   align-items: center;
 }
 
-.intro input {
+.nome input {
   font-size: 2em;
   font-family: Arial, Helvetica, sans-serif;
   margin-left: 20px;
@@ -71,6 +70,10 @@ input:focus {
   border: none;
   border-bottom: 3px solid rgba(75, 75, 75, 0.8);
   background: none;
+}
+
+.infos input {
+  font-size: 1em;
 }
 
 .botoes {
@@ -127,6 +130,75 @@ input:focus {
 }
 
 .seguro p {
+  font-weight: 700;
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+@media (max-width: 650px) {
+  .conteudo {
+    width: 350px;
+  }
+
+  .infos label {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 520px) {
+  .conteudo {
+    width: 300px;
+  }
+
+  .infos input {
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 450px) {
+  .conteudo {
+    width: 250px;
+  }
+
+  .fotoPerfil {
+    width: 60px;
+  }
+
+  .nome input {
+    font-size: 1.5em;
+    width: 150px;
+    padding-left: 5px;
+  }
+
+  .seguro {
+    padding: 15px;
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 350px) {
+  .conteudo {
+    width: 200px;
+  }
+
+  .fotoPerfil {
+    width: 50px;
+  }
+
+  .nome input {
+    font-size: 1.3em;
+    width: 130px;
+    margin-bottom: 5px;
+  }
+
+  .infos input {
+    font-size: 0.8em;
+    width: 180px;
+  }
+
+  .seguro {
+    font-size: 0.8em;
+  }
 }
