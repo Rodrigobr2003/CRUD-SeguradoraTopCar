@@ -8,7 +8,7 @@
     rgba(179, 179, 179, 1),
     rgba(255, 255, 255, 1)
   );
-  width: 1343px;
+  background-size: cover;
   display: flex;
   position: relative;
 }
@@ -18,18 +18,6 @@
   margin-left: 50px;
   font-family: Andale Mono, monospace;
 }
-
-/* @media (max-width: 1000px) {
-}
-
-@media (max-width: 900px) {
-}
-
-@media (max-width: 700px) {
-}
-
-@media (max-width: 300px) {
-} */
 
 .titulo {
   font-size: 3.5em;
@@ -79,4 +67,145 @@
   font-size: 1.25em;
   letter-spacing: 2px;
   word-spacing: 2px;
+}
+
+@media (max-width: 1000px) {
+  .titulo {
+    font-size: 2.6em;
+  }
+
+  .descricao {
+    font-size: 1.8em;
+  }
+
+  .card {
+    width: 70%;
+  }
+
+  .card h1 {
+    width: 70%;
+    font-size: 1.2em;
+  }
+
+  .card p {
+    width: 70%;
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 850px) {
+  .titulo {
+    font-size: 2.3em;
+  }
+
+  .descricao {
+    font-size: 1.5em;
+  }
+
+  .card {
+    width: 60%;
+  }
+
+  .card h1 {
+    width: 70%;
+    font-size: 1em;
+  }
+
+  .card p {
+    width: 70%;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 650px) {
+  .conteudo {
+    text-align: center;
+  }
+
+  .apresentacao {
+    margin-left: 0px;
+  }
+
+  .titulo {
+    font-size: 2.5em;
+  }
+
+  .descricao {
+    font-size: 1.2em;
+  }
+
+  .conteudo2 {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 520px) {
+  .conteudo {
+    text-align: center;
+  }
+
+  .apresentacao {
+    margin-left: 0px;
+  }
+
+  .titulo {
+    font-size: 2em;
+  }
+
+  .descricao {
+    font-size: 1.2em;
+  }
+
+  .conteudo2 {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  .conteudo {
+    text-align: center;
+  }
+
+  .apresentacao {
+    margin-left: 0px;
+  }
+
+  .titulo {
+    font-size: 1.75em;
+  }
+
+  .descricao {
+    font-size: 0.8em;
+  }
+
+  .conteudo2 {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .card h1 {
+    font-size: 1.2em;
+  }
+
+  .card p {
+    font-size: 1em;
+  }
 }
