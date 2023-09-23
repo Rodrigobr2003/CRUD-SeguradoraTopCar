@@ -105,3 +105,60 @@ button a {
   color: white;
   text-decoration: none;
 }
+
+@media (max-width: 600px) {
+  .titulo {
+    font-size: 1.6em;
+  }
+
+  .buttons {
+    margin-top: 20px;
+  }
+
+  .botao {
+    font-size: 1.2em;
+    margin-bottom: 80px;
+  }
+
+  .botaoF {
+    margin-bottom: -10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .titulo {
+    font-size: 1.2em;
+  }
+
+  .buttons {
+    margin-top: 20px;
+  }
+
+  .botao {
+    font-size: 0.8em;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 400px) {
+  .seletor {
+    margin-bottom: 40px;
+    padding: 20px;
+  }
+
+  .titulo {
+    font-size: 1em;
+  }
+
+  .buttons {
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .botao {
+    width: 70%;
+    margin-bottom: 20px;
+  }
+}
