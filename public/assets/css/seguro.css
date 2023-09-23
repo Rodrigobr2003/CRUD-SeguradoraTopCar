@@ -1,5 +1,8 @@
 .servicos {
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .flex {
@@ -56,4 +59,20 @@
 
 .btnCard:visited {
   color: black;
+}
+
+@media (max-width: 400px) {
+  .card {
+    width: 250px;
+    height: 200px;
+  }
+
+  .imgCard {
+    height: 40px;
+  }
+
+  .btnCard {
+    font-size: 1em;
+    margin-top: 30px;
+  }
 }
