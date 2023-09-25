@@ -1,16 +1,22 @@
 <%- include('includes/head') %> <%- include("includes/nav") %>
 <div class="fundoImagem">
-  <article>
-    <div class="conteudo">
-      <img src="/chat.png" style="float: left" />
-      <h1 class="titulo">Chat Online</h1>
+  <article class="conteudo">
+    <div class="seletor">
+      <h1 class="titulo">
+        <span><img src="/chat.png" class="imgServico" /> </span>Chat Online
+      </h1>
 
-      <p class="descricao">
-        Converse com um de nossos moderadores pelo chat online!
-      </p>
+      <div class="innerSeletor">
+        <p class="descricao">
+          Converse com um de nossos moderadores pelo chat online!
+        </p>
 
-      <textarea placeholder="Descreva o problema..." class="txtArea"></textarea>
-      <button class="botao"><a>Enviar</a></button>
+        <textarea
+          placeholder="Descreva o problema..."
+          class="txtArea"
+        ></textarea>
+        <button class="botao"><a>Enviar</a></button>
+      </div>
     </div>
   </article>
 </div>
