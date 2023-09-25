@@ -4,30 +4,45 @@
   position: relative;
   background-image: url("/fundo.png");
   background-size: cover;
-}
-
-article {
-  position: relative;
   display: flex;
+  align-items: center;
 }
 
 /*------------ CONTEUDO ------------*/
 
 .conteudo {
+  position: relative;
+  display: flex;
+  align-items: center;
   background-color: rgba(102, 102, 102, 0.5);
-  display: inline-block;
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 50px;
   padding: 50px;
   border-radius: 20px;
   clear: both;
 }
 
+.seletor {
+  background-color: rgba(65, 65, 65, 0.6);
+  display: inline-block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  border-radius: 15px;
+  clear: both;
+  padding: 50px;
+}
+
+.imgServico {
+  float: left;
+}
+
 .titulo {
   font-size: 3em;
   font-family: arial;
-  margin-left: 20px;
   float: left;
 }
 
@@ -53,20 +68,23 @@ article {
 }
 
 .txtArea {
-  float: right;
+  float: left;
   margin-top: 20px;
   margin-left: 10px;
-  width: 200px;
-  height: 100px;
+  width: 400px;
+  height: 300px;
   padding: 5px;
   font-size: 1.15em;
+  border-radius: 10px;
 }
 
 .botao {
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 2px solid black;
   display: flex;
   clear: left;
   margin-top: 20px;
-  margin-left: 30px;
   background-color: red;
   color: white;
   padding: 10px;
@@ -85,4 +103,164 @@ article {
 .botao a {
   text-decoration: none;
   color: white;
+}
+
+@media (max-width: 900px) {
+  .conteudo {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 80%;
+  }
+
+  .seletor {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .titulo {
+    font-size: 3.5em;
+  }
+
+  .imgServico {
+    display: none;
+  }
+
+  .innerSeletor {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .descricao {
+    margin-top: 30px;
+    width: 100%;
+    font-size: 1em;
+  }
+
+  .botao {
+    width: 70%;
+    font-size: 1.5em;
+    display: inline-block;
+    text-align: center;
+  }
+}
+
+@media (max-width: 750px) {
+  .conteudo {
+    width: 70%;
+  }
+
+  .titulo {
+    font-size: 3em;
+    font-weight: bold;
+  }
+
+  .descricao {
+    width: 80%;
+  }
+
+  .txtArea {
+    width: 80%;
+    height: 200px;
+  }
+
+  .botao {
+    width: 70%;
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 600px) {
+  .conteudo {
+    width: 70%;
+    padding: 20px;
+  }
+
+  .seletor {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .titulo {
+    font-size: 2.5em;
+    font-weight: bold;
+  }
+
+  .descricao {
+    width: 100%;
+  }
+
+  .botao {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 450px) {
+  .conteudo {
+    width: 80%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .seletor {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .imgServico {
+    display: none;
+  }
+
+  .titulo {
+    margin-left: 0px;
+    font-size: 2em;
+    font-weight: bold;
+  }
+
+  .select {
+    width: 100%;
+  }
+
+  .descricao {
+    margin-top: 40px;
+    font-size: 0.8em;
+    width: 80%;
+  }
+
+  .txtArea {
+    width: 80%;
+  }
+
+  .botao {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 400px) {
+  .descricao {
+    margin-top: 40px;
+    font-size: 0.8em;
+    width: 120%;
+  }
+
+  .select {
+    width: 140%;
+  }
+
+  .txtArea {
+    width: 120%;
+  }
+
+  .botao {
+    width: 120%;
+    font-size: 1em;
+  }
 }

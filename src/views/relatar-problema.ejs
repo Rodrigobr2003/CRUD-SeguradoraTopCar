@@ -1,23 +1,31 @@
 <%- include('includes/head') %> <%- include("includes/nav") %>
 <div class="fundoImagem">
-  <article>
-    <div class="conteudo">
-      <img src="/atencao.png" style="float: left" />
-      <h1 class="titulo">Relatar Problema</h1>
+  <article class="conteudo">
+    <div class="seletor">
+      <h1 class="titulo">
+        <span><img src="/atencao.png" class="imgServico" /> </span>Relatar
+        Problema
+      </h1>
 
-      <p class="descricao">
-        Selecione o tipo de erro que está ocorrendo e insira na caixa de texto a
-        descrição do problema.
-      </p>
+      <div class="innerSeletor">
+        <p class="descricao">
+          Selecione o tipo de erro que está ocorrendo e insira na caixa de texto
+          a descrição do problema.
+        </p>
 
-      <select class="select">
-        <option>Erro de comunicação com a equipe</option>
-        <option>Bug no site</option>
-        <option>Problema com o plano</option>
-        <option>Erro com o sinistro</option>
-      </select>
-      <textarea placeholder="Descreva o problema..." class="txtArea"></textarea>
-      <button class="botao"><a href="/servicos">Relatar Problema</a></button>
+        <select class="select">
+          <option>Erro de comunicação com a equipe</option>
+          <option>Bug no site</option>
+          <option>Problema com o plano</option>
+          <option>Erro com o sinistro</option>
+        </select>
+
+        <textarea
+          placeholder="Descreva o problema..."
+          class="txtArea"
+        ></textarea>
+        <button class="botao"><a href="/servicos">Relatar Problema</a></button>
+      </div>
     </div>
   </article>
 </div>
