@@ -1,14 +1,10 @@
 /*------------ BODY ------------*/
 
-.fundoImagem {
-  position: relative;
-}
-
 .conteudo {
   background-image: url("/bg.png");
   background-size: cover;
-  position: relative;
   display: flex;
+  align-items: center;
 }
 
 /*------------ SELETOR ------------*/
@@ -17,11 +13,10 @@
   background-color: rgba(168, 168, 168, 0.7);
   display: inline-block;
   margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 40px;
   border-radius: 15px;
   padding: 50px;
+  margin: 50px;
 }
 
 /*------- H3 -------*/
@@ -29,7 +24,7 @@
 .tituloSim {
   font-family: arial;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
   padding: 10px;
   color: white;
@@ -39,7 +34,7 @@
 .descricao {
   font-family: arial;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
   margin-top: 30px;
   padding: 10px;
@@ -56,8 +51,18 @@
   float: left;
 }
 
+.inputs {
+  display: flex;
+  float: left;
+  flex-wrap: wrap;
+}
+
+.divInput {
+  margin-left: 50px;
+}
+
 .tituloInput {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.7);
   width: 170px;
   clear: both;
   color: white;
@@ -76,7 +81,7 @@
 }
 
 .tituloSelect {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.7);
   width: 170px;
   clear: both;
   color: white;
@@ -88,15 +93,9 @@
   border-radius: 10px;
 }
 
-.select {
-  padding: 5px;
-  border-radius: 10px;
-}
-
 .class {
   float: right;
   clear: right;
-  margin-right: 165px;
 }
 
 button {
@@ -122,4 +121,95 @@ button:hover {
 button a {
   text-decoration: none;
   color: white;
+}
+
+@media (max-width: 850px) {
+  .seletor {
+    margin-top: 40px;
+    padding: 40px;
+  }
+
+  .introducao {
+    text-align: center;
+  }
+
+  .tituloSim {
+    font-size: 1.5em;
+    width: 80%;
+  }
+
+  .descricao {
+    font-size: 0.9em;
+  }
+
+  .tituloSim,
+  .descricao {
+    display: block;
+    margin: 10px auto;
+  }
+
+  .titulo {
+    font-size: 3.5em;
+    margin-top: 20px;
+  }
+
+  .inputs {
+    justify-content: center;
+  }
+
+  .divInput {
+    margin: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .seletor {
+    margin-top: 40px;
+    padding: 20px;
+    width: 60%;
+  }
+
+  .tituloSim {
+    font-size: 1.2em;
+    width: 80%;
+  }
+
+  .descricao {
+    font-size: 0.8em;
+  }
+
+  .titulo {
+    font-size: 2.5em;
+    margin-top: 10px;
+  }
+
+  .inputs {
+    justify-content: center;
+  }
+
+  .divInput {
+    margin: 0px;
+    margin-bottom: -10px;
+  }
+
+  .tituloInput {
+    width: 120px;
+    font-size: 0.8em;
+    margin-top: 30px;
+  }
+
+  .input {
+    width: 80%;
+  }
+
+  .tituloSelect {
+    width: 120px;
+    font-size: 0.8em;
+    margin-top: 30px;
+  }
+
+  button {
+    float: left;
+    font-size: 1em;
+  }
 }
