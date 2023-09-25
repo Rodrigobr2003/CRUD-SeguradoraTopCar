@@ -1,27 +1,22 @@
 /*------------ BODY ------------*/
 
-.fundoImagem {
-  position: relative;
-}
-
 .conteudo {
   background-image: url("/bg.png");
   background-size: cover;
-  position: relative;
   display: flex;
+  align-items: center;
 }
 
 /*------------ SELETOR ------------*/
 
 .seletor {
-  background-color: rgba(102, 102, 102, 0.5);
+  background-color: rgba(168, 168, 168, 0.7);
   display: inline-block;
   margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 40px;
   border-radius: 15px;
   padding: 50px;
+  margin: 50px;
 }
 
 /*------- H3 -------*/
@@ -29,7 +24,7 @@
 .tituloSim {
   font-family: arial;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
   padding: 10px;
   color: white;
@@ -39,7 +34,7 @@
 .descricao {
   font-family: arial;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
   margin-top: 30px;
   padding: 10px;
@@ -56,9 +51,38 @@
   float: left;
 }
 
+.inputs {
+  display: flex;
+  float: left;
+  flex-wrap: wrap;
+}
+
+.divInput {
+  margin-left: 50px;
+}
+
 .tituloInput {
-  background-color: rgba(0, 0, 0, 0.6);
-  width: 190px;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 170px;
+  clear: both;
+  color: white;
+  font-family: arial;
+  padding: 5px;
+  font-size: 1.2em;
+  margin-top: 40px;
+  margin-bottom: 2px;
+  border-radius: 10px;
+}
+
+.input {
+  padding: 5px;
+  margin-left: 3px;
+  border-radius: 10px;
+}
+
+.tituloSelect {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 170px;
   clear: both;
   color: white;
   font-family: arial;
@@ -74,18 +98,17 @@
   border-radius: 10px;
 }
 
-.input {
-  padding: 5px;
-  margin-left: 3px;
-  border-radius: 10px;
+.class {
+  float: right;
+  clear: right;
 }
 
-.botao {
+button {
   display: flex;
   clear: both;
   float: right;
-  margin-top: -40px;
-  margin-right: 160px;
+  margin-top: 20px;
+  margin-right: 180px;
   background-color: red;
   color: white;
   padding: 10px;
@@ -93,14 +116,109 @@
   font-size: 1.5em;
 }
 
-.botao:hover {
+button:hover {
   animation-name: botaoRelato;
   animation-duration: 0.6s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
 
-.botao a {
+button a {
   text-decoration: none;
   color: white;
+}
+
+@media (max-width: 850px) {
+  .seletor {
+    margin-top: 40px;
+    padding: 40px;
+  }
+
+  .introducao {
+    text-align: center;
+  }
+
+  .tituloSim {
+    font-size: 1.5em;
+    width: 80%;
+  }
+
+  .descricao {
+    font-size: 0.9em;
+  }
+
+  .tituloSim,
+  .descricao {
+    display: block;
+    margin: 10px auto;
+  }
+
+  .titulo {
+    font-size: 3.5em;
+    margin-top: 20px;
+  }
+
+  .inputs {
+    justify-content: center;
+  }
+
+  .divInput {
+    margin: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .seletor {
+    margin-top: 40px;
+    padding: 20px;
+    width: 60%;
+  }
+
+  .tituloSim {
+    font-size: 1.2em;
+    width: 80%;
+  }
+
+  .descricao {
+    font-size: 0.8em;
+  }
+
+  .titulo {
+    font-size: 2.5em;
+    margin-top: 10px;
+  }
+
+  .inputs {
+    justify-content: center;
+  }
+
+  .divInput {
+    margin: 0px;
+    margin-bottom: -10px;
+  }
+
+  .tituloInput {
+    width: 120px;
+    font-size: 0.8em;
+    margin-top: 30px;
+  }
+
+  .input {
+    width: 80%;
+  }
+
+  .tituloSelect {
+    width: 120px;
+    font-size: 0.8em;
+    margin-top: 30px;
+  }
+
+  .select {
+    width: 80%;
+  }
+
+  button {
+    float: left;
+    font-size: 1em;
+  }
 }
