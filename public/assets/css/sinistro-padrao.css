@@ -105,3 +105,66 @@ article {
   text-decoration: none;
   color: white;
 }
+
+@media (max-width: 650px) {
+  .conteudo {
+    margin-top: 40px;
+    padding: 40px;
+    width: 70%;
+  }
+
+  .titulo {
+    font-size: 2.5em;
+  }
+
+  .conteudoImg {
+    display: none;
+  }
+
+  .descricao {
+    width: 80%;
+    font-size: 1em;
+  }
+
+  .documentos {
+    width: 80%;
+    font-size: 1em;
+  }
+
+  .documentosTit {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 500px) {
+  .conteudo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .titulo {
+    font-size: 4em;
+  }
+
+  .descricao {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .documentos {
+    width: 100%;
+  }
+
+  .subTit {
+    display: none;
+  }
+
+  .lista li {
+    width: 80%;
+  }
+
+  .botao {
+    margin-left: 0px;
+  }
+}
