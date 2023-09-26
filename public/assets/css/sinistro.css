@@ -9,6 +9,7 @@
 .conteudo {
   position: relative;
   display: flex;
+  align-items: center;
 }
 
 /*------------ SELETOR ------------*/
@@ -87,15 +88,15 @@ button:hover {
 }
 
 .botaoChuva {
-  grid-column-start: 3;
-  grid-column-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 2;
 }
 
 .botaoFogo {
-  grid-column-start: 3;
-  grid-column-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
 }
@@ -106,17 +107,6 @@ button:hover {
   grid-row-start: 3;
   grid-row-end: 4;
   margin-bottom: -10px;
-}
-
-.botaoVidro {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 3;
-  grid-row-end: 4;
-  margin-bottom: -10px;
-}
-
-.botaoVidro {
   width: 700px;
   margin-left: 75px;
 }
@@ -124,4 +114,75 @@ button:hover {
 button a {
   color: white;
   text-decoration: none;
+}
+
+@media (max-width: 1000px) {
+  .seletor {
+    margin-top: 40px;
+    padding: 40px;
+    width: 70%;
+  }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .button {
+    margin-bottom: 50px;
+    width: 80%;
+  }
+
+  .btnImg {
+    display: none;
+  }
+
+  button .titulo {
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 1.5em;
+    width: 50%;
+  }
+
+  button .descricao {
+    font-size: 0.7em;
+    padding-top: 20px;
+  }
+
+  .botaoVidro {
+    width: 60%;
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 550px) {
+  button {
+    width: 80%;
+  }
+
+  button .titulo {
+    font-size: 1em;
+  }
+
+  button .descricao {
+    font-size: 0.7em;
+  }
+
+  .botaoVidro {
+    width: 80%;
+  }
+}
+
+@media (max-width: 400px) {
+  .seletor {
+    width: 60%;
+  }
+
+  button {
+    width: 110%;
+  }
+
+  .botaoVidro {
+    width: 110%;
+  }
 }
