@@ -44,6 +44,7 @@ exports.login = async function (req, res) {
       return res.render("home", {
         pagina: "Home",
         css: "home",
+        _id: req.session.cadastro._id,
       });
     });
   } catch (err) {
