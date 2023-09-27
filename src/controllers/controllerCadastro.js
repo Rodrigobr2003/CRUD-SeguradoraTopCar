@@ -40,11 +40,12 @@ exports.login = async function (req, res) {
 
     req.flash("success", "Logado com sucesso!");
     req.session.cadastro = login.cadastro;
+    console.log(login.cadastro._id);
     req.session.save(() => {
       return res.render("home", {
         pagina: "Home",
         css: "home",
-        _id: req.session.cadastro._id,
+        cadastro: login.cadastro,
       });
     });
   } catch (err) {
